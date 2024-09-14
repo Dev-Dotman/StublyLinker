@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import IpAdress from '../Config/IpAdress';
+import EventDetails from './EventDetails';
 
 const EventPage = () => {
   const { token } = useParams();
@@ -17,6 +18,7 @@ const EventPage = () => {
         }
         const data = await response.json();
         setEventData(data);
+        console.log(data)
       } catch (err) {
         setError(err.message);
       }
@@ -30,9 +32,7 @@ const EventPage = () => {
 
   return (
     <div>
-      <h1>{eventData.event.title}</h1>
-      <p>{eventData.event.city}</p>
-      {/* Render guests and tickets */}
+      <EventDetails event={eventData.event} guests={eventData.guests} tickets={eventData.tickets} />;
     </div>
   );
 };
