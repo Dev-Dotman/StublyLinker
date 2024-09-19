@@ -1,0 +1,133 @@
+
+.container3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  z-index: 800;
+}
+
+.form-container {
+  background-color: lavender;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  margin: 5% auto;
+  max-width: 450px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-group {
+  margin-bottom: 1rem;
+}
+
+.input-group h2 {
+  color: lightsalmon;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.input-group label {
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  font-size: 0.9rem;
+  color: #fff;
+}
+
+.input-group input {
+  width: 90%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  margin: 10px auto;
+}
+
+.input-group input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.password-wrapper {
+  position: relative;
+}
+
+.eye-icon {
+  position: absolute;
+  right: 30px;
+  top: 60%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 18px; /* Adjust size if needed */
+}
+
+.btn {
+  padding: 0.75rem;
+  border: none;
+  background-color: #004080;
+  color: #fff;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+.toggle {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.toggle span {
+  color: #007bff;
+  cursor: pointer;
+}
+
+.toggle span:hover {
+  text-decoration: underline;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .form-container {
+    padding: 1.5rem;
+  }
+  .container3 {
+    position: absolute;
+  }
+  .form-container{
+    min-height: 80vh;
+    width: 80%;
+  }
+  .input-group{
+    display: block;
+  }
+  .input-group input {
+    width: 90%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    margin: 10px auto;
+  }
+  .eye-icon {
+    right: 10px;
+    top: 60%;
+  }
+}
+
+@media (max-width: 480px) {
+  .form-container {
+    padding: 1rem;
+  }
+}

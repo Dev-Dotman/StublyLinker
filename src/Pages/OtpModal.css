@@ -1,0 +1,73 @@
+/* OtpModal.css */
+
+.otp-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+  }
+  
+  .otp-modal-content {
+    background: lavender;
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+  }
+  
+  .otp-inputs {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+  }
+  
+  .otp-input {
+    width: 50px;
+    height: 50px;
+    margin: 0 5px;
+    font-size: 24px;
+    text-align: center;
+    border-radius: 50%;
+    border: 2px solid #004080;
+    outline: none;
+  }
+  
+  .otp-input:focus {
+    border-color: lightSalmon;
+  }
+  
+  .btn {
+    background-color: #004080;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+  
+  .btn-close {
+    background-color: lightsalmon;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px auto;
+  }
+  
+  @media (max-width: 768px) {
+    .otp-modal-content {
+        width: 80%;
+      }
+
+      .otp-input{
+        width: 30px;
+        height: 30px;
+      }
+  }

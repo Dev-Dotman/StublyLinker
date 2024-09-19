@@ -8,8 +8,10 @@ const EventPage = () => {
   const [eventData, setEventData] = useState(null);
   const [error, setError] = useState(null);
   const ip = IpAdress.ip
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
+    setLoading(true)
     const fetchEventData = async () => {
       try {
         const response = await fetch(`${ip}/event/${token}`);
@@ -21,18 +23,34 @@ const EventPage = () => {
         console.log(data)
       } catch (err) {
         setError(err.message);
+      } finally{
+        setLoading(false)
       }
     };
 
     fetchEventData();
   }, [token]);
 
-  if (error) return <div>Error: {error}</div>;
-  if (!eventData) return <div>Loading...</div>;
+  if (error) return <div style={{
+    display: 'flex',
+    height: '100vh',
+    justifyContent: 'center',
+    alignItems: 'center',
+    textAlign: 'center',
+    fontSize: '24px',
+    color: '#333',
+  }}>sorry we couldn't make that happen</div>
+  if (!eventData) return <div>{loading && (
+    <div className="loading-overlay">
+      <div className="backg">
+        <div className="spinner"></div>
+      </div>
+    </div>
+  )}</div>
 
   return (
     <div>
-      <EventDetails event={eventData.event} guests={eventData.guests} tickets={eventData.tickets} />;
+      <EventDetails event={eventData.event} guests={eventData.guests} tickets={eventData.tickets} />
     </div>
   );
 };

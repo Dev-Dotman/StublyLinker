@@ -1,0 +1,286 @@
+/* General Styles */
+.container2 {
+  margin-top: 140px;
+  width: 100vw;
+  max-width: 100vw;
+}
+
+/* Navbar */
+/* Search Section */
+.search-section {
+  margin-top: 30px;
+  text-align: center;
+}
+
+/* Combined search and filter dropdown */
+/* Combined search container */
+.combined-search {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+/* Search container with icon */
+.search-container {
+  position: relative;
+  width: 70%;
+  max-width: 500px;
+}
+
+/* Input field */
+#combined-search-bar {
+  width: 100%;
+  padding: 15px 15px 15px 50px; /* Padding left for the icon */
+  border-radius: 5px;
+  font-size: 18px;
+  border: 1px solid lavender;
+  margin-bottom: 20px;
+  outline: none;
+  box-sizing: border-box; /* Ensure padding is included in width */
+}
+
+/* Focus state */
+#combined-search-bar:focus {
+  border-color: #ffa07a; /* Light salmon */
+}
+
+/* Search icon */
+.search-icon {
+  position: absolute;
+  top: 38%;
+  left: 15px;
+  transform: translateY(-50%);
+  color: lavender;
+  font-size: 20px;
+}
+
+
+
+/* Custom dropdown button */
+.dropdown-btn {
+  background-color: #fff;
+  border: 1px solid lavender;
+  padding: 12px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 150px; /* Fixed width */
+  /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
+  position: relative; /* Ensures dropdown aligns under it */
+  margin-top: -10px;
+}
+
+/* Arrow indicator */
+.dropdown-btn .arrow {
+  font-size: 12px;
+  margin-left: 10px;
+}
+
+/* Dropdown list */
+.dropdown-list {
+  position: absolute;
+  top: calc(100% + 5px); /* Ensures it appears right below the button */
+  left: 0; /* Aligns it to the left of the button */
+  width: 200px; /* Fixed width matching the button */
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  margin-top: 10px;
+  list-style-type: none;
+  padding: 0;
+  max-height: 300px;
+  overflow-y: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  text-transform: capitalize;
+}
+
+@media (max-width: 768px) {
+  
+.search-container {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+}
+  .combined-search {
+    width: 90%;
+    margin: 0 auto;
+    display: block;
+    align-items: center;
+  }
+  .dropdown-btn {
+    margin: -10px auto;
+  }
+  .search-icon{
+    margin-top: 0;
+  }
+}
+
+/* Dropdown items */
+.dropdown-item {
+  padding: 12px 20px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  text-align: left;
+}
+
+.dropdown-item:hover {
+  background-color: #f1f1f1;
+}
+
+/* Active filter */
+.dropdown-item.active {
+  background-color: lavender; /* Highlight active filter */
+  color: white;
+}
+
+
+/* Masonry Grid for Events */
+.events-section {
+  padding-top: 30px;
+  padding: 30px 30px 0;
+}
+
+.event-card {
+  position: relative;
+  margin-top: 30px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 400px;
+  width: 100%;
+  border-radius: 10px;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  overflow: hidden;
+  margin-bottom: 20px;
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  /* border: 2px solid lavender; */
+  padding: 0;
+}
+
+.event-card:hover {
+  transform: scale(1.05);
+  /* box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); */
+}
+
+/* Darkening overlay */
+.image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.event-content {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  color: white;
+  z-index: 2;
+}
+
+.event-content h3 {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.event-details {
+  position: static;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: block;
+  justify-content: space-between;
+  align-items: center;
+  background: rgb(0, 0, 0);
+  padding: 10px;
+  z-index: 3;
+  border-top: 2px solid lavender;
+}
+
+.guest-photo2 {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+  transition: transform 0.5s ease;
+  position: absolute;
+  right: 35px;
+  bottom: 60px;
+  border: 2px solid lavender;
+}
+
+.details-left p {
+  margin: 5px 0;
+  font-size: 13px;
+  color: #fff;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.view-button {
+  background-color: #004080;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+
+.view-button:hover {
+  background-color: #ff7f50; /* Coral */
+}
+
+/* Pagination */
+.pagination-section {
+  display: flex;
+  justify-content: center;
+  padding: 30px 0;
+}
+
+.pagination-controls {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.prev-button, .next-button {
+  background-color: #4682b4;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.prev-button:disabled, .next-button:disabled {
+  background-color: #dcdcdc; /* Disabled button color */
+}
+
+.prev-button:hover:not(:disabled), .next-button:hover:not(:disabled) {
+  background-color: #1e90ff; /* DodgerBlue */
+}
+
+.page-info {
+  font-size: 18px;
+}
