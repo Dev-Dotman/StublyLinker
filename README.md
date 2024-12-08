@@ -1,6 +1,8 @@
 Stubly - E-Ticketing System (In Development)
 Stubly is an e-ticketing platform currently under active development. Once complete, Stubly aims to simplify event ticketing, enhance user experience, and empower event organizers with robust management tools.
 
+Note: though the frontend is active for those who want to view, the server is currently inactive 
+
 🚧 Project Status
 This project is in its early stages and is not yet fully functional.
 Here’s a breakdown of what’s currently implemented and what’s planned:
